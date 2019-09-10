@@ -1,0 +1,8 @@
+What kind of value does the function getFirstVowel return?
+- a string
+
+Of the three ways that you unwrapped the value of firstVowel, which do you feel was most appropriate for this situation, and why?
+- I liked the ! because it was the shortest and the cleanest.
+
+This exercise assumes that you do, in fact, have a vowel (of the English language) in your name. What, if anything, would you need to change about the code if your name was "Bjørk" or "Ghrftnx"?
+- you would need an else saying that if there is no vowels to print something saying "you have no vowels in your name!"
