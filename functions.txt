@@ -1,0 +1,6 @@
+What keyword does Swift use to mark the definition of a function? (Think like def in Python and function in JavaScript.)
+- func
+How do you declare the type of value that a function returns?
+- use a return arrow then a hyphen followed by a right angle bracket and the name of the type to return.
+How could you use argument labels to help clean up your code or make it more readable?
+- You write an argument label before the parameter name, separated by a space. The more specific you are with what you name it, the clearer your code will be!
