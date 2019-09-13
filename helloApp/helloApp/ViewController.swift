@@ -9,17 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-    // MARK: Properties
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var greetingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        nameTextField.text = "Riley"
+        sayHello("")
     }
 
     @IBAction func sayHello(_ sender: Any) {
-        greetingLabel.text = "Hello, " + (nameTextField.text ?? "human") + "!"
+        greetingLabel.text = "Hello, \(nameTextField.text ?? "human")!"
     }
     
 }
