@@ -1,0 +1,7 @@
+Kaelen Cook
+Swift Functions
+
+i. func creates a function
+ii. func funcname(items) -> String/Int/This determines what the function returns
+iii. make the argument labels relate to what the function needs
+
