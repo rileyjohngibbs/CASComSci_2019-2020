@@ -51,6 +51,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-6Q-14M">
+                                <rect key="frame" x="183" y="462" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="toggleSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="3iF-CD-wJK"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,7 +73,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="goodnBadJobSwitch" destination="FVU-6Q-14M" id="xVC-vM-F4i"/>
                         <outlet property="greetingLabel" destination="Bvf-OZ-UdL" id="pN2-cf-9Mt"/>
+                        <outlet property="helloButton" destination="O9m-DC-a4N" id="bRi-Wj-vpU"/>
                         <outlet property="nameTextField" destination="QUz-wA-qla" id="KEa-rB-BZH"/>
                     </connections>
                 </viewController>
