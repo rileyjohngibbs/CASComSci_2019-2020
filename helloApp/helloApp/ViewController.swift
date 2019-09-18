@@ -26,11 +26,14 @@ class ViewController: UIViewController {
     
     @IBAction func sayHello(_ sender: Any) {
         var Job: String
+        var Title: String
         if goodnBadJobSwitch.isOn {
             Job = goodJobList.randomElement()!
+            Title = "Good Job"
         }
         else {
             Job = badJobList.randomElement()!
+            Title = "Bad Job"
         }
         if nameTextField.text != nil && nameTextField.text == "Billy" {
             greetingLabel.text = "Die, Billy"
@@ -38,15 +41,19 @@ class ViewController: UIViewController {
         else {
             greetingLabel.text = "\(Job), \(nameTextField.text ?? "human")."
         }
+        helloButton.setTitle("\(Title) again", for: .normal)
     }
     
     @IBAction func toggleSwitch(_ sender: UISwitch) {
         let yes = sender.isOn
+        var Title: String
         if yes {
-            helloButton.setTitle("Good Job", for: .normal)
+            Title = "Good Job"
+            helloButton.setTitle(Title, for: .normal)
         }
         else {
-            helloButton.setTitle("Bad Job", for: .normal)
+            Title = "Bad Job"
+            helloButton.setTitle(Title, for: .normal)
         }
     }
     
