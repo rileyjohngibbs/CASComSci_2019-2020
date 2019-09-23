@@ -38,6 +38,9 @@ class ViewController: UIViewController {
         if bDayInput.text == "" {
             bDayLabel.text = "You need to enter your birthday"
         }
+        else if yare == nil {
+            bDayLabel.text = "You need to enter a valid number"
+        }
         else {
             bDayLabel.text = "You were born in \(birthYear)"
         }
