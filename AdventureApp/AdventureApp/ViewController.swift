@@ -44,7 +44,10 @@ class ViewController: UIViewController {
                                  2: "Go Outside"],
                             "three" :
                                 [1: "Become President",
-                                 2: "Alien Invasion"]
+                                 2: "Alien Invasion"],
+                            "four" :
+                                [1: "",
+                                 2: ""]
     ]
     var dicPart = ["one", "two", "three"]
     var number: Int = 0
@@ -52,9 +55,6 @@ class ViewController: UIViewController {
     func runText(option: Int) {
         Result.text = responseMessages[dicPart[number]]![option]
         number += 1
-        if number >= 2 {
-            number = 2
-        }
         choice1.setTitle(buttonResponses[dicPart[number]]![1], for: .normal)
         choice2.setTitle(buttonResponses[dicPart[number]]![2], for: .normal)
     }
