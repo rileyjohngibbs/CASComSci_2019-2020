@@ -19,7 +19,7 @@
                                 <rect key="frame" x="192" y="317" width="30" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="5"/>
+                                <state key="normal" title="3"/>
                                 <connections>
                                     <segue destination="2Ng-y5-91E" kind="show" id="96X-PF-obJ"/>
                                 </connections>
@@ -28,7 +28,7 @@
                                 <rect key="frame" x="192" y="404" width="30" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="12"/>
+                                <state key="normal" title="7"/>
                                 <connections>
                                     <segue destination="NFg-ai-v7n" kind="show" id="eHM-w2-V6K"/>
                                 </connections>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="192" y="481" width="30" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="20"/>
+                                <state key="normal" title="10"/>
                                 <connections>
                                     <segue destination="ntS-BU-iLU" kind="show" id="nsy-zr-9He"/>
                                 </connections>
@@ -46,7 +46,7 @@
                                 <rect key="frame" x="192" y="562" width="30" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="35"/>
+                                <state key="normal" title="20"/>
                                 <connections>
                                     <segue destination="2Ux-a1-rrP" kind="show" id="6CN-zA-fOj"/>
                                 </connections>
