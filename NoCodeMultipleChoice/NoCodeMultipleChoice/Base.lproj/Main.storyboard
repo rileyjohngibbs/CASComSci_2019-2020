@@ -84,9 +84,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Walrus" translatesAutoresizingMaskIntoConstraints="NO" id="cT4-uc-bC3">
-                                <rect key="frame" x="20" y="382" width="374" height="253"/>
+                                <rect key="frame" x="22" y="369" width="374" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfe-i1-b17">
+                                <rect key="frame" x="22" y="369" width="374" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="yIh-xQ-emg" kind="show" id="Fcz-Ic-QnJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WuI-1u-ZK3"/>
@@ -96,6 +103,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCe-jy-azt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="-582.58928571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zLW-7d-hiS">
+            <objects>
+                <viewController id="yIh-xQ-emg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s23-oq-GS7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="the walrus finds all." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KG-xJ-W2e">
+                                <rect key="frame" x="65" y="257" width="285" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Vye-jm-1PR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qDL-EV-2ie"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ieg-ya-cUC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866.6666666666667" y="-910.04464285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B8h-8N-5ma">
