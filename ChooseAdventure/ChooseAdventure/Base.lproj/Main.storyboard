@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f03-7x-FEd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gY-Vk-cuS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -72,6 +72,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6O-4O-MaX" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="230" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="okr-m3-2Nu">
+            <objects>
+                <viewController id="3gY-Vk-cuS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2xX-vl-Ngf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-ka-6i9">
+                                <rect key="frame" x="20" y="54" width="374" height="373"/>
+                                <string key="text">Your best friend, Jonathan, just handed you a time machine. "This thing treated me well in the past, John," says Jonathan.   What do you do?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRh-J2-QwJ">
+                                <rect key="frame" x="20" y="445" width="374" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Travel to the Past"/>
+                                <connections>
+                                    <segue destination="p8R-Ci-BOo" kind="show" id="ehE-D8-Duh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDE-Ej-ycq">
+                                <rect key="frame" x="20" y="558" width="374" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Travel to the Future"/>
+                                <connections>
+                                    <segue destination="Ywx-AW-1Pv" kind="show" id="5i6-hk-EVc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U6-WF-lSs">
+                                <rect key="frame" x="20" y="666" width="374" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get a Sandwich with Jonathan"/>
+                                <connections>
+                                    <segue destination="jDl-g3-xhj" kind="show" id="SyP-bw-XTY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2U6-WF-lSs" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="251" id="111-AF-fKP"/>
+                            <constraint firstItem="aDE-Ej-ycq" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="142" id="931-Qp-DLb"/>
+                            <constraint firstItem="HRh-J2-QwJ" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="32.5" id="EeU-8l-yZ8"/>
+                            <constraint firstItem="TVV-ka-6i9" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="-207.5" id="HwL-Xr-IWL"/>
+                            <constraint firstItem="TVV-ka-6i9" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="JLJ-bZ-DSX"/>
+                            <constraint firstItem="HRh-J2-QwJ" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="SRn-Je-9Xw"/>
+                            <constraint firstItem="aDE-Ej-ycq" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="V0O-q4-SCu"/>
+                            <constraint firstItem="2U6-WF-lSs" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="YMO-fu-NYH"/>
+                            <constraint firstItem="TVV-ka-6i9" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="l3Q-8c-QdG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7x1-HL-ny2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nen-CB-e3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3451" y="-1814"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OaQ-va-KJo">
@@ -913,6 +972,157 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2F-LP-Q6J" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1075" y="2609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EBV-Lb-1te">
+            <objects>
+                <viewController id="Ywx-AW-1Pv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o70-8N-MQW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How far into the future do you travel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1p-xg-qEM">
+                                <rect key="frame" x="20" y="54" width="374" height="373"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOI-iS-qSW">
+                                <rect key="frame" x="20" y="445" width="374" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="A few minutes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-ng-nqt">
+                                <rect key="frame" x="20" y="558" width="374" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="A few years"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNm-4w-y2K">
+                                <rect key="frame" x="20" y="666" width="374" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="A few billion years"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q1p-xg-qEM" firstAttribute="centerY" secondItem="o70-8N-MQW" secondAttribute="centerY" constant="-180.5" id="2uc-dl-G4E"/>
+                            <constraint firstItem="dtW-ng-nqt" firstAttribute="centerX" secondItem="o70-8N-MQW" secondAttribute="centerX" id="A0d-n5-Tim"/>
+                            <constraint firstItem="Q1p-xg-qEM" firstAttribute="centerX" secondItem="o70-8N-MQW" secondAttribute="centerX" id="GFP-De-q7g"/>
+                            <constraint firstItem="FNm-4w-y2K" firstAttribute="centerX" secondItem="o70-8N-MQW" secondAttribute="centerX" id="XOc-Ws-ZcH"/>
+                            <constraint firstItem="iOI-iS-qSW" firstAttribute="centerX" secondItem="o70-8N-MQW" secondAttribute="centerX" id="ZJg-YV-f71"/>
+                            <constraint firstItem="dtW-ng-nqt" firstAttribute="centerY" secondItem="o70-8N-MQW" secondAttribute="centerY" constant="169" id="doK-lb-b7S"/>
+                            <constraint firstItem="iOI-iS-qSW" firstAttribute="centerY" secondItem="o70-8N-MQW" secondAttribute="centerY" constant="59.5" id="g68-vt-kpv"/>
+                            <constraint firstItem="Q1p-xg-qEM" firstAttribute="centerX" secondItem="o70-8N-MQW" secondAttribute="centerX" id="in2-yM-DKk"/>
+                            <constraint firstItem="FNm-4w-y2K" firstAttribute="centerY" secondItem="o70-8N-MQW" secondAttribute="centerY" constant="278" id="vaK-2Y-cik"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="toW-dC-8Tp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qs4-3c-aKP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5jL-hq-r4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3451" y="-1046"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bli-7b-YJO">
+            <objects>
+                <viewController id="p8R-Ci-BOo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="buC-Ud-LGA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How far into the past do you travel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7X-8Y-Ssa">
+                                <rect key="frame" x="20" y="54" width="374" height="373"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4O-Dw-0AZ">
+                                <rect key="frame" x="20" y="445" width="374" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="To the Dawn of Time"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-Tj-aFa">
+                                <rect key="frame" x="20" y="558" width="374" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Hitler Time"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jow-kD-hAY">
+                                <rect key="frame" x="20" y="666" width="374" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Your worst regret"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jow-kD-hAY" firstAttribute="centerX" secondItem="buC-Ud-LGA" secondAttribute="centerX" id="5Fv-LN-4SD"/>
+                            <constraint firstItem="jow-kD-hAY" firstAttribute="centerY" secondItem="buC-Ud-LGA" secondAttribute="centerY" constant="278" id="AEM-3q-3Nu"/>
+                            <constraint firstItem="aGR-Tj-aFa" firstAttribute="centerY" secondItem="buC-Ud-LGA" secondAttribute="centerY" constant="169" id="KKl-4E-Xhv"/>
+                            <constraint firstItem="K4O-Dw-0AZ" firstAttribute="centerY" secondItem="buC-Ud-LGA" secondAttribute="centerY" constant="59.5" id="SOK-jl-dDV"/>
+                            <constraint firstItem="aGR-Tj-aFa" firstAttribute="centerX" secondItem="buC-Ud-LGA" secondAttribute="centerX" id="cCW-Nu-0sL"/>
+                            <constraint firstItem="h7X-8Y-Ssa" firstAttribute="centerX" secondItem="buC-Ud-LGA" secondAttribute="centerX" id="dYg-24-AOv"/>
+                            <constraint firstItem="h7X-8Y-Ssa" firstAttribute="centerX" secondItem="buC-Ud-LGA" secondAttribute="centerX" id="n1c-6s-P93"/>
+                            <constraint firstItem="h7X-8Y-Ssa" firstAttribute="centerY" secondItem="buC-Ud-LGA" secondAttribute="centerY" constant="-180.5" id="ou7-p5-85J"/>
+                            <constraint firstItem="K4O-Dw-0AZ" firstAttribute="centerX" secondItem="buC-Ud-LGA" secondAttribute="centerX" id="wHW-TH-YSb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jCe-ac-kvc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VZf-Ts-bqs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Z6-xH-kg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="-1088"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="awT-6Q-WQk">
+            <objects>
+                <viewController id="jDl-g3-xhj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gTv-gr-7ni">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTt-cx-oOo">
+                                <rect key="frame" x="20" y="54" width="374" height="373"/>
+                                <string key="text">"Hey Jonathan," you say. "Yeah, John?" says Jonathan. "Let's get a sandwich."  Jonathan is down to get a sandwich.  Where do you go to get a sandwich?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hg1-4R-tMJ">
+                                <rect key="frame" x="20" y="445" width="374" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Chuster's McNutBusters"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCJ-TK-Lwe">
+                                <rect key="frame" x="20" y="558" width="374" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="CholesteroLand"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kq-va-uhv">
+                                <rect key="frame" x="20" y="666" width="374" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tofu Bofu"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hg1-4R-tMJ" firstAttribute="centerY" secondItem="gTv-gr-7ni" secondAttribute="centerY" constant="59.5" id="2va-Hv-gfv"/>
+                            <constraint firstItem="7kq-va-uhv" firstAttribute="centerY" secondItem="gTv-gr-7ni" secondAttribute="centerY" constant="278" id="9CR-VK-8go"/>
+                            <constraint firstItem="7kq-va-uhv" firstAttribute="centerX" secondItem="gTv-gr-7ni" secondAttribute="centerX" id="Vi7-3o-S4h"/>
+                            <constraint firstItem="KTt-cx-oOo" firstAttribute="centerX" secondItem="gTv-gr-7ni" secondAttribute="centerX" id="a1K-Lm-8Pl"/>
+                            <constraint firstItem="hg1-4R-tMJ" firstAttribute="centerX" secondItem="gTv-gr-7ni" secondAttribute="centerX" id="ayP-Pf-Z1U"/>
+                            <constraint firstItem="KTt-cx-oOo" firstAttribute="centerX" secondItem="gTv-gr-7ni" secondAttribute="centerX" id="bVQ-hb-01A"/>
+                            <constraint firstItem="PCJ-TK-Lwe" firstAttribute="centerX" secondItem="gTv-gr-7ni" secondAttribute="centerX" id="fKt-Kb-7uS"/>
+                            <constraint firstItem="KTt-cx-oOo" firstAttribute="centerY" secondItem="gTv-gr-7ni" secondAttribute="centerY" constant="-180.5" id="hjL-W7-pc4"/>
+                            <constraint firstItem="PCJ-TK-Lwe" firstAttribute="centerY" secondItem="gTv-gr-7ni" secondAttribute="centerY" constant="169" id="y87-jk-et5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V3c-WZ-QlZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZUs-2v-fHq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8X-Zo-Lyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4529" y="-1088"/>
         </scene>
     </scenes>
 </document>
