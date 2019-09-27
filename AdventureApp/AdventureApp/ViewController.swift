@@ -16,9 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        Result.text = "Do you want to initialize?"
-        choice1.setTitle("Yes", for: .normal)
-        choice2.setTitle("No", for: .normal)
     }
     
     var responseMessages =
@@ -62,10 +59,10 @@ class ViewController: UIViewController {
     @IBAction func press1(_ sender: Any) {
         runText(option: 1)
     }
-    
+
     @IBAction func press2(_ sender: Any) {
         runText(option: 2)
     }
-    
+
 }
 
