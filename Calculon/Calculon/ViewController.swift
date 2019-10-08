@@ -75,15 +75,6 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func pressingNumber(_ sender: UIButton) {
-        sender.backgroundColor = UIColor.black
-    }
-    
-    @IBAction func pressDoneNumber(_ sender: UIButton) {
-        sender.backgroundColor = UIColor.darkGray
-    }
-    
-    
     @IBAction func didPressNumber(_ sender: UIButton) {
         let stringValue:String? = sender.titleLabel?.text
         

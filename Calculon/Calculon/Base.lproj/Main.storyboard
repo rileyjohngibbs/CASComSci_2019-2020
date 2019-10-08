@@ -24,8 +24,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaI-BO-mPR"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msW-OE-GmJ"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wph-O5-HSj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO4-nH-0SI">
@@ -37,8 +35,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1o8-F3-C4K"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGW-eb-vnr"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xSU-jL-wgB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqI-3r-vwL">
@@ -50,8 +46,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cn0-YW-W8r"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aq-ox-7Cl"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGc-SH-FT6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-C4-0C8">
@@ -74,8 +68,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RFD-G3-Wk2"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3E-aa-8bz"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUh-sB-ElB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH0-Xh-0QX">
@@ -87,8 +79,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPv-ia-f9N"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6e-mj-bGH"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sni-LG-kHn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK1-Nw-bWe">
@@ -100,8 +90,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWe-s2-VPk"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NYp-BL-tQU"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mv7-sH-EYs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4B-OE-VNb">
@@ -124,8 +112,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T8U-no-Yt4"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KS1-mv-0Ea"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4S-CY-jOl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-7m-BpX">
@@ -137,8 +123,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIQ-lk-cO0"/>
-                                    <action selector="pressDoneNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKH-QE-Ub1"/>
-                                    <action selector="pressingNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fi-RP-uxh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyO-X1-GQO">
