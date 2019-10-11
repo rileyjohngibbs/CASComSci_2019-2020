@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="3gY-Vk-cuS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2xX-vl-Ngf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-ka-6i9">
@@ -49,10 +49,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2U6-WF-lSs" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="251" id="111-AF-fKP"/>
-                            <constraint firstItem="aDE-Ej-ycq" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="142" id="931-Qp-DLb"/>
-                            <constraint firstItem="HRh-J2-QwJ" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="32.5" id="EeU-8l-yZ8"/>
-                            <constraint firstItem="TVV-ka-6i9" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="-207.5" id="HwL-Xr-IWL"/>
+                            <constraint firstItem="2U6-WF-lSs" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="278" id="111-AF-fKP"/>
+                            <constraint firstItem="aDE-Ej-ycq" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="169" id="931-Qp-DLb"/>
+                            <constraint firstItem="HRh-J2-QwJ" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="59.5" id="EeU-8l-yZ8"/>
+                            <constraint firstItem="TVV-ka-6i9" firstAttribute="centerY" secondItem="2xX-vl-Ngf" secondAttribute="centerY" constant="-180.5" id="HwL-Xr-IWL"/>
                             <constraint firstItem="TVV-ka-6i9" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="JLJ-bZ-DSX"/>
                             <constraint firstItem="HRh-J2-QwJ" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="SRn-Je-9Xw"/>
                             <constraint firstItem="aDE-Ej-ycq" firstAttribute="centerX" secondItem="2xX-vl-Ngf" secondAttribute="centerX" id="V0O-q4-SCu"/>
@@ -61,6 +61,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7x1-HL-ny2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4Xx-fp-31c"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nen-CB-e3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -535,11 +536,17 @@
                                 <rect key="frame" x="20" y="445" width="374" height="71"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="To the Dawn of Time"/>
+                                <connections>
+                                    <segue destination="5nq-Jl-wZ4" kind="show" id="Mbu-Dx-xF8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-Tj-aFa">
                                 <rect key="frame" x="20" y="558" width="374" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Hitler Time"/>
+                                <connections>
+                                    <segue destination="jNm-gA-tNK" kind="show" id="gSe-jS-Nph"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jow-kD-hAY">
                                 <rect key="frame" x="20" y="666" width="374" height="66"/>
@@ -623,12 +630,11 @@
             <objects>
                 <viewController id="5nq-Jl-wZ4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kFo-Mp-sna">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-PK-naQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You travel to the Dawn of Time. There is a wonderful looking buffet. You are very hungry.  Do you consume the foodstuffs?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-PK-naQ">
                                 <rect key="frame" x="8" y="54" width="399" height="373"/>
-                                <string key="text">You travel to the Dawn of Time. You find yourself in a cramped room filled to the brim with  books, cables, old computers and hard drives. You hear the       </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -636,17 +642,15 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2z-iB-LTs">
                                 <rect key="frame" x="20" y="445" width="374" height="71"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="To the Dawn of Time"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <segue destination="AMB-oW-VtI" kind="show" id="Tvd-es-mXD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUm-yv-zdB">
                                 <rect key="frame" x="20" y="558" width="374" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Hitler Time"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amI-su-FBn">
-                                <rect key="frame" x="20" y="666" width="374" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Your worst regret"/>
+                                <state key="normal" title="No"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -655,8 +659,6 @@
                             <constraint firstItem="W2z-iB-LTs" firstAttribute="centerX" secondItem="kFo-Mp-sna" secondAttribute="centerX" id="B16-cP-zpH"/>
                             <constraint firstItem="qUm-yv-zdB" firstAttribute="centerX" secondItem="kFo-Mp-sna" secondAttribute="centerX" id="FPa-oD-Njz"/>
                             <constraint firstItem="HeD-PK-naQ" firstAttribute="centerX" secondItem="kFo-Mp-sna" secondAttribute="centerX" id="GVz-QO-eBj"/>
-                            <constraint firstItem="amI-su-FBn" firstAttribute="centerY" secondItem="kFo-Mp-sna" secondAttribute="centerY" constant="278" id="Uql-21-5k3"/>
-                            <constraint firstItem="amI-su-FBn" firstAttribute="centerX" secondItem="kFo-Mp-sna" secondAttribute="centerX" id="f2m-n7-Kel"/>
                             <constraint firstItem="HeD-PK-naQ" firstAttribute="centerX" secondItem="kFo-Mp-sna" secondAttribute="centerX" id="tdq-fm-uwX"/>
                             <constraint firstItem="HeD-PK-naQ" firstAttribute="centerY" secondItem="kFo-Mp-sna" secondAttribute="centerY" constant="-180.5" id="v5v-p8-doE"/>
                             <constraint firstItem="W2z-iB-LTs" firstAttribute="centerY" secondItem="kFo-Mp-sna" secondAttribute="centerY" constant="59.5" id="wRd-fB-73T"/>
@@ -667,7 +669,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adg-0x-69N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1223" y="-589"/>
+            <point key="canvasLocation" x="-775" y="-788"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Fm-Bh-vbx">
+            <objects>
+                <viewController id="jNm-gA-tNK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pPM-Hl-ds0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YL-gH-CCj">
+                                <rect key="frame" x="20" y="54" width="374" height="373"/>
+                                <string key="text">You decide to travel back to Hitler Time. Unfortunately, you forgot that you were jewish. Hitler gets mad that you believe in a different religion than him.  You get obliterated by his mechasoldiers.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWN-KR-G1u">
+                                <rect key="frame" x="20" y="558" width="374" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <segue destination="3gY-Vk-cuS" kind="show" id="nbm-Fp-7tk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6YL-gH-CCj" firstAttribute="centerX" secondItem="pPM-Hl-ds0" secondAttribute="centerX" id="D5G-yk-9c9"/>
+                            <constraint firstItem="6YL-gH-CCj" firstAttribute="centerX" secondItem="pPM-Hl-ds0" secondAttribute="centerX" id="FOd-1j-yX2"/>
+                            <constraint firstItem="iWN-KR-G1u" firstAttribute="centerX" secondItem="pPM-Hl-ds0" secondAttribute="centerX" id="I7N-MZ-Iaj"/>
+                            <constraint firstItem="6YL-gH-CCj" firstAttribute="centerY" secondItem="pPM-Hl-ds0" secondAttribute="centerY" constant="-180.5" id="aVE-lz-uUQ"/>
+                            <constraint firstItem="iWN-KR-G1u" firstAttribute="centerY" secondItem="pPM-Hl-ds0" secondAttribute="centerY" constant="169" id="k7J-F7-O2G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S8p-cb-Xwi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="05m-fR-BVk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tG5-Kx-gz8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="497" y="-303"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CZI-fG-yNR">
+            <objects>
+                <viewController id="AMB-oW-VtI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d9Z-q2-nXU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0L-rR-05M">
+                                <rect key="frame" x="8" y="54" width="399" height="373"/>
+                                <string key="text">You eat all that you possibly can before you get infinitely full. After a few minutes of euphoria,  you realize that the food served were develloping planets filled with humanlike civilizations.  The guilt destroys you.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-tl-U7z">
+                                <rect key="frame" x="20" y="558" width="374" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <segue destination="3gY-Vk-cuS" kind="show" id="dJU-i5-JOh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TeA-tl-U7z" firstAttribute="centerY" secondItem="d9Z-q2-nXU" secondAttribute="centerY" constant="169" id="Fsx-Y4-XeC"/>
+                            <constraint firstItem="n0L-rR-05M" firstAttribute="centerY" secondItem="d9Z-q2-nXU" secondAttribute="centerY" constant="-180.5" id="Y1U-gC-PRD"/>
+                            <constraint firstItem="n0L-rR-05M" firstAttribute="centerX" secondItem="d9Z-q2-nXU" secondAttribute="centerX" id="fKy-yH-idq"/>
+                            <constraint firstItem="n0L-rR-05M" firstAttribute="centerX" secondItem="d9Z-q2-nXU" secondAttribute="centerX" id="hC0-ue-1Qx"/>
+                            <constraint firstItem="TeA-tl-U7z" firstAttribute="centerX" secondItem="d9Z-q2-nXU" secondAttribute="centerX" id="irh-Jz-x2P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K18-2p-ulo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JLt-Sa-vdy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvo-Gk-7v8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2412" y="-628"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dJU-i5-JOh"/>
+    </inferredMetricsTieBreakers>
 </document>
