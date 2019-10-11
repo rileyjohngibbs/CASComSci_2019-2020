@@ -56,14 +56,17 @@ class ViewController: UIViewController {
     
     @IBAction func didPressPlus(_ sender: Any) {
         changeMode(newMode: .addition)
+        labelString = ""
     }
     
     @IBAction func didPressMinus(_ sender: Any) {
         changeMode(newMode: .subtraction)
+        labelString = ""
     }
     
     @IBAction func didPressMultiply(_ sender: Any) {
         changeMode(newMode: .multiplication)
+        labelString = ""
     }
     
     @IBAction func didPressClear(_ sender: Any) {
