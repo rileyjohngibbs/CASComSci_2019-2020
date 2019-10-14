@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gY-Vk-cuS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGw-iy-cUd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="3gY-Vk-cuS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2xX-vl-Ngf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-ka-6i9">
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nen-CB-e3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3451" y="-1814"/>
+            <point key="canvasLocation" x="4360.8695652173919" y="-1814.0625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OaQ-va-KJo">
@@ -473,7 +473,7 @@
             <objects>
                 <viewController id="Ywx-AW-1Pv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o70-8N-MQW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How far into the future do you travel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1p-xg-qEM">
@@ -523,7 +523,7 @@
             <objects>
                 <viewController id="p8R-Ci-BOo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="buC-Ud-LGA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How far into the past do you travel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7X-8Y-Ssa">
@@ -579,7 +579,7 @@
             <objects>
                 <viewController id="jDl-g3-xhj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gTv-gr-7ni">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTt-cx-oOo">
@@ -623,14 +623,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8X-Zo-Lyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5800" y="-1179"/>
+            <point key="canvasLocation" x="6708.6956521739139" y="-1179.2410714285713"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wai-Q4-ydn">
             <objects>
                 <viewController id="5nq-Jl-wZ4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kFo-Mp-sna">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You travel to the Dawn of Time. There is a wonderful looking buffet. You are very hungry.  Do you consume the foodstuffs?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-PK-naQ">
@@ -676,7 +676,7 @@
             <objects>
                 <viewController id="jNm-gA-tNK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pPM-Hl-ds0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YL-gH-CCj">
@@ -691,7 +691,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Play Again"/>
                                 <connections>
-                                    <segue destination="3gY-Vk-cuS" kind="show" id="nbm-Fp-7tk"/>
+                                    <segue destination="QGw-iy-cUd" kind="show" id="nbm-Fp-7tk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -716,7 +716,7 @@
             <objects>
                 <viewController id="AMB-oW-VtI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d9Z-q2-nXU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0L-rR-05M">
@@ -731,7 +731,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Play Again"/>
                                 <connections>
-                                    <segue destination="3gY-Vk-cuS" kind="show" id="dJU-i5-JOh"/>
+                                    <segue destination="QGw-iy-cUd" kind="show" id="dJU-i5-JOh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -751,8 +751,27 @@
             </objects>
             <point key="canvasLocation" x="-2412" y="-628"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yrS-cN-1v5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QGw-iy-cUd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5Fa-QE-Ldk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JNr-hV-vY3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3gY-Vk-cuS" kind="relationship" relationship="rootViewController" id="g9G-wH-EfN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swU-6O-kLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="-2348"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dJU-i5-JOh"/>
+        <segue reference="nbm-Fp-7tk"/>
     </inferredMetricsTieBreakers>
 </document>
