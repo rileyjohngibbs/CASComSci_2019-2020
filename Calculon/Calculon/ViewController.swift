@@ -27,7 +27,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func didPressEquals(_ sender: Any) {
+    @IBAction func didPressEquals(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.systemOrange
         guard let labelInt: Int = Int(labelString) else {
             return
         }
@@ -54,35 +55,63 @@ class ViewController: UIViewController {
         lastButtonWasMode = true
     }
     
-    @IBAction func didPressPlus(_ sender: Any) {
+    @IBAction func didPressPlus(_ sender: UIButton) {
         changeMode(newMode: .addition)
         labelString = ""
+        sender.backgroundColor = UIColor.systemOrange
     }
     
-    @IBAction func didPressMinus(_ sender: Any) {
+    @IBAction func didPressMinus(_ sender: UIButton) {
         changeMode(newMode: .subtraction)
         labelString = ""
+        sender.backgroundColor = UIColor.systemOrange
     }
     
-    @IBAction func didPressMultiply(_ sender: Any) {
+    @IBAction func didPressMultiply(_ sender: UIButton) {
         changeMode(newMode: .multiplication)
         labelString = ""
+        sender.backgroundColor = UIColor.systemOrange
     }
     
-    @IBAction func didPressClear(_ sender: Any) {
+    @IBAction func didPressClear(_ sender: UIButton) {
         labelString = "0"
         currentMode = .not_set
         lastButtonWasMode = false
         savedNum = 0
         Label.text = "0"
+        sender.backgroundColor = UIColor.lightGray
     }
     
     
+    @IBAction func pressingNumber(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.black
+    }
+    
+    @IBAction func pressingClear(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.black
+    }
+    
+    @IBAction func pressingOperator(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.black
+    }
+    
+    
+    
+    
     @IBAction func didPressNumber(_ sender: UIButton) {
-        let stringValue:String? = sender.titleLabel?.text
+        guard let stringValue:String = sender.titleLabel?.text else {
+            Label.text = "Error"
+            return
+        }
         
-        labelString = labelString.appending(stringValue!)
+        if lastButtonWasMode {
+            lastButtonWasMode = false
+            labelString = "0"
+        }
+        
+        labelString = labelString.appending(stringValue)
         updateText()
+        sender.backgroundColor = UIColor.darkGray
     }
     
     func updateText(){
