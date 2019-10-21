@@ -15,28 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH8-gd-3tE">
-                                <rect key="frame" x="20" y="325" width="374" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rr1-4r-Wfj">
-                                <rect key="frame" x="20" y="505" width="374" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Purchase Potion"/>
-                                <connections>
-                                    <action selector="getPotion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MbG-FR-PYR"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpL-xQ-K7E">
-                                <rect key="frame" x="20" y="744" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ess-wn-0AF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="216"/>
                                 <connections>
@@ -44,15 +22,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="yt5-OF-Kel"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH8-gd-3tE">
+                                <rect key="frame" x="20" y="325" width="374" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpL-xQ-K7E">
+                                <rect key="frame" x="20" y="744" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rr1-4r-Wfj">
+                                <rect key="frame" x="20" y="557" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Purchase Potion"/>
+                                <connections>
+                                    <action selector="getPotion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MbG-FR-PYR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ess-wn-0AF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4FX-H7-GmL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NH8-gd-3tE" secondAttribute="trailing" constant="20" id="C1z-4a-kYd"/>
+                            <constraint firstItem="NH8-gd-3tE" firstAttribute="top" secondItem="Ess-wn-0AF" secondAttribute="bottom" constant="65" id="Mot-mQ-wbo"/>
                             <constraint firstItem="Ess-wn-0AF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q1z-BF-PIb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DpL-xQ-K7E" secondAttribute="bottom" constant="88" id="Qnt-46-581"/>
                             <constraint firstItem="DpL-xQ-K7E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XOJ-Ba-ekf"/>
+                            <constraint firstItem="rr1-4r-Wfj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gZL-v3-SbQ"/>
                             <constraint firstItem="Ess-wn-0AF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jMi-Zn-27b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rr1-4r-Wfj" secondAttribute="trailing" constant="20" id="ki5-Qw-cbj"/>
+                            <constraint firstItem="DpL-xQ-K7E" firstAttribute="top" secondItem="rr1-4r-Wfj" secondAttribute="bottom" constant="139" id="oRn-SN-eWe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DpL-xQ-K7E" secondAttribute="trailing" constant="20" id="reE-kh-ZyU"/>
+                            <constraint firstItem="NH8-gd-3tE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uzp-6A-zi4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

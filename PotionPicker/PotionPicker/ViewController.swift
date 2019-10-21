@@ -39,7 +39,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func getPotion(_ sender: UIButton) {
         let num = Picker.selectedRow(inComponent: 0)
-        print("gvhyfjtersxvghdrtu")
         if potionList[num].value > Septims {
             Label.text = "I'm sorry, but you don't seem to have enough septims to purchase this potion."
         }
