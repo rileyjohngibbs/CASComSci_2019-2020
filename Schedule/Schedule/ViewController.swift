@@ -11,20 +11,21 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var schedulePicker: UIPickerView!
     @IBOutlet weak var Button: UIButton!
+    @IBOutlet weak var scheduleLabel: UILabel!
     var baseButtonColor = UIColor.systemTeal
-    let mySchedule = [
+    let myAcademics = [
         "A": "CAS French",
         "B": "CAS Computer Science",
         "C": "HSE International Film",
         "D": "Science Fiction",
-        "E": "Free",
         "F": "CAS Calculus",
-        "Mo": "Drama Conservatory",
-        "Tu": "Drama Conservatory",
-        "Th": "Drama Conservatory",
-        "Fr": "Drama Conservatory",
-        "We": "Senior Mysteries"
+        "Monday": "Drama Conservatory",
+        "Tuesday": "Drama Conservatory",
+        "Wednesday": "Life Skills",
+        "Thursday": "Drama Conservatory",
+        "Friday": "Drama Conservatory"
     ]
+    let artBlock = "afternoon"
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -56,7 +57,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return ""
     }
     
-    var ACBdays = ["A", "B", "C"]
+    var ACBdays = ["A", "C", "B"]
     var Weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     var scheduleType = ["Normal", "Double Block", "Assembly"]
     
@@ -64,16 +65,56 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         Button.backgroundColor = baseButtonColor
-        Button.frame = CGRect(x: 160, y: 500, width: 100, height: 100)
+        Button.frame = CGRect(x: 160, y: 400, width: 100, height: 100)
         Button.layer.cornerRadius = 0.5 * Button.bounds.size.width
     }
     
     @IBAction func pressingButton(_ sender: UIButton) {
-        sender.backgroundColor = UIColor.lightGray
+        sender.backgroundColor = UIColor.white
     }
     
     @IBAction func didPressButton(_ sender: UIButton) {
         sender.backgroundColor = baseButtonColor
+        getSchedule()
+    }
+    
+    func getSchedule() {
+        let dayType = schedulePicker.selectedRow(inComponent: 0)
+        let ACBDay = ACBdays[dayType]
+        let weekDayType = schedulePicker.selectedRow(inComponent: 1)
+        let weekDay = Weekdays[weekDayType]
+        var periodRotation:[String: [String]] = ["":[""]]
+        if artBlock == "morning" {
+            periodRotation = [
+                "A": ["Morning", "D", "E", "G", "H"],
+                "C": ["Morning", "F", "D", "I", "G"],
+                "B": ["Morning", "E", "F", "H", "I"]
+            ]
+        }
+        else if artBlock == "afternoon" {
+            periodRotation = [
+                "A": ["A", "B", "D", "E", "Afternoon"],
+                "C": ["C", "A", "F", "D", "Afternoon"],
+                "B": ["B", "C", "E", "F", "Afternoon"]
+            ]
+        }
+        else {
+            print("UrMumGey")
+        }
+        var output: String = ""
+        for period in periodRotation[ACBDay]! {
+            output += "\(period):   "
+            if period == "Morning" || period == "Afternoon" {
+                output += "\(myAcademics[weekDay] ?? "Free Period")"
+            }
+            else {
+                output += "\(myAcademics[period] ?? "Free Period")"
+            }
+            output += "\n"
+        }
+    
+        scheduleLabel.text = output
+        
     }
     
 
