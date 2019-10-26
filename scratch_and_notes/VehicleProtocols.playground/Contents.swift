@@ -1,0 +1,7 @@
+var engine = V8()
+var mustang = Car(withEngine: engine)
+mustang.start()
+mustang.accelerate(rate: 100)
+print("Present speed: \(mustang.readSpeedometer())")
+mustang.accelerate(rate: 3)
+print("Present speed: \(mustang.readSpeedometer())")
