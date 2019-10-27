@@ -19,11 +19,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         "C": "HSE International Film",
         "D": "Science Fiction",
         "F": "CAS Calculus",
-        "Monday": "Drama Conservatory",
-        "Tuesday": "Drama Conservatory",
+        "Monday": "Directing",
+        "Tuesday": "Production Design",
         "Wednesday": "Life Skills",
-        "Thursday": "Drama Conservatory",
-        "Friday": "Drama Conservatory"
+        "Thursday": "Directing",
+        "Friday": "Production Design"
     ]
     let artBlock = "afternoon"
     
