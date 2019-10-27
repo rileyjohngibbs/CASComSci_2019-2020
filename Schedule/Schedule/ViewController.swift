@@ -83,24 +83,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let ACBDay = ACBdays[dayType]
         let weekDayType = schedulePicker.selectedRow(inComponent: 1)
         let weekDay = Weekdays[weekDayType]
+        let scheduleTypeDay = schedulePicker.selectedRow(inComponent: 2)
+        let scheduleDay = scheduleType[scheduleTypeDay]
+        
+        
         var periodRotation:[String: [String]] = ["":[""]]
-        if artBlock == "morning" {
-            periodRotation = [
-                "A": ["Morning", "D", "E", "G", "H"],
-                "C": ["Morning", "F", "D", "I", "G"],
-                "B": ["Morning", "E", "F", "H", "I"]
-            ]
-        }
-        else if artBlock == "afternoon" {
-            periodRotation = [
-                "A": ["A", "B", "D", "E", "Afternoon"],
-                "C": ["C", "A", "F", "D", "Afternoon"],
-                "B": ["B", "C", "E", "F", "Afternoon"]
-            ]
-        }
-        else {
-            print("UrMumGey")
-        }
+        periodRotation = getPeriodRotation(scheduleType: scheduleDay, artBlock: artBlock)
+        
+
+
         var output: String = ""
         for period in periodRotation[ACBDay]! {
             output += "\(period):   "
@@ -115,6 +106,63 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
         scheduleLabel.text = output
         
+    }
+    
+    func getPeriodRotation (scheduleType: String, artBlock: String) -> [String:[String]] {
+        var outlet: [String:[String]] = ["":[""]]
+        if scheduleType == "Normal" {
+            if artBlock == "morning" {
+                outlet = [
+                    "A": ["Morning", "D", "E", "G", "H"],
+                    "C": ["Morning", "F", "D", "I", "G"],
+                    "B": ["Morning", "E", "F", "H", "I"]
+                ]
+            }
+            else if artBlock == "afternoon" {
+                outlet = [
+                    "A": ["A", "B", "D", "E", "Afternoon"],
+                    "C": ["C", "A", "F", "D", "Afternoon"],
+                    "B": ["B", "C", "E", "F", "Afternoon"]
+                ]
+            }
+        }
+        
+        else if scheduleType == "Double Block" {
+            if artBlock == "morning" {
+                outlet = [
+                    "A": ["Morning", "D", "G"],
+                    "C": ["Morning", "F", "I"],
+                    "B": ["Morning", "E", "H"]
+                ]
+            }
+            else if artBlock == "afternoon" {
+                outlet = [
+                    "A": ["A", "D", "Afternoon"],
+                    "C": ["C", "F", "Afternoon"],
+                    "B": ["B", "E", "Afternoon"]
+                ]
+            }
+        }
+        
+        else if scheduleType == "Assembly" {
+            if artBlock == "morning" {
+                outlet = [
+                    "A": ["Morning"],
+                    "C": ["Morning"],
+                    "B": ["Morning"]
+                ]
+            }
+            else if artBlock == "afternoon" {
+                outlet = [
+                    "A": [""],
+                    "C": [""],
+                    "B": [""]
+                ]
+            }
+        }
+        
+        return outlet
+
     }
     
 
