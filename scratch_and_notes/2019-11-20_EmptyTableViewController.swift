@@ -1,3 +1,7 @@
+/*
+In each empty function body, write in plain English what that function is supposed to do for a table view application like the ones we've been working on in class.
+*/
+
 class EmptyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
