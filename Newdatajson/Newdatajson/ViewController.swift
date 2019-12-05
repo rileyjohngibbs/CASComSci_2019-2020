@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
         // This just puts the file contents (unparsed) into the label.
         if let string = jsonFileString {
-            myLabel.text = string
+            myLabel.text = "ADVISOR: \(advisor). GRADE: \(grade). CLASSES: \(classes.joined(separator: ", "))."
         }
         
         if jsonFileData != nil {
