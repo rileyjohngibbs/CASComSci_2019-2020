@@ -4,6 +4,7 @@ func main() {
     let MAX_ID: Int = 15
     let swapiUrlStr = "https://swapi.co/api/people/"
     
+    // MARK: Fetch data synchronously
     print("Fetching the first \(MAX_ID) characters synchronously. This is slow.")
     var syncPeople: [SwapiPerson] = []
     for i: Int in (1...MAX_ID) {
@@ -16,9 +17,13 @@ func main() {
         }
     }
     syncPeople.sort(by: {(a: SwapiPerson, b: SwapiPerson) in a.name < b.name})
-    for person in syncPeople { print(person) }
+    // MARK: Print all of the people
+    for person in syncPeople {
+        print("\(person.name) was born in \(person.birthYear). They are \(person.height) centimeters tall.")
+    }
     
-    print("Fetching the first \(MAX_ID) character asynchronously. This should be pretty quick.")
+    // MARK: Fetch data asynchronously
+    print("Fetching the first \(MAX_ID) characters asynchronously. This should be pretty quick.")
     var tasks: [URLSessionDataTask] = []
     var asyncPeople: [SwapiPerson] = []
     for i: Int in (1...MAX_ID) {
@@ -38,7 +43,10 @@ func main() {
             asyncPeople.append(person)
             if asyncPeople.count == MAX_ID {
                 asyncPeople.sort(by: {(a: SwapiPerson, b: SwapiPerson) in a.name < b.name})
-                for person in asyncPeople { print(person) }
+                // MARK: Print a single person at a time
+                for person in asyncPeople {
+                    print("\(person.name) was born in \(person.birthYear). They are \(person.height) centimeters tall.")
+                }
             }
         }
         tasks.append(task)
