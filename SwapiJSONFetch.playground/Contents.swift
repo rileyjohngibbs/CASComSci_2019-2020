@@ -17,7 +17,7 @@ func main() {
         }
     }
     syncPeople.sort(by: {(a: SwapiPerson, b: SwapiPerson) in a.name < b.name})
-    // MARK: Print all of the people
+    // Print all of the people
     for person in syncPeople {
         print("\(person.name) was born in \(person.birthYear). They are \(person.height) centimeters tall.")
     }
@@ -41,9 +41,9 @@ func main() {
                 return
             }
             asyncPeople.append(person)
+            // Print all of the people if we're done fetching them
             if asyncPeople.count == MAX_ID {
                 asyncPeople.sort(by: {(a: SwapiPerson, b: SwapiPerson) in a.name < b.name})
-                // MARK: Print a single person at a time
                 for person in asyncPeople {
                     print("\(person.name) was born in \(person.birthYear). They are \(person.height) centimeters tall.")
                 }

@@ -13,15 +13,20 @@ func getName(_ data: Data) -> String? {
 
 for i in (1...5) {
     if let url = URL(string: "https://swapi.co/api/people/\(i)/") {
+        
+        // MARK: Define and schedule the task with URLSession
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, errors) in
             guard let data = data else { return }
             print(getName(data) ?? "Oops.")
         }
         task.resume()
+        
+        // MARK: Define and schedule the task with a DispatchQueue
         queue.async() {
             guard let data = try? Data(contentsOf: url) else { return }
             print(getName(data) ?? "Oops.")
         }
+        
     }
 }
