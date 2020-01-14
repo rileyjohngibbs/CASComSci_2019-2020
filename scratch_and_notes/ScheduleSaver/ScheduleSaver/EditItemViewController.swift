@@ -11,7 +11,6 @@ import UIKit
 class EditItemViewController: UIViewController {
     
     var selectedItem: ScheduleItem? = nil
-    var itemIndex: Int? = nil
     var scheduleData: [ScheduleItem] = []
     
     @IBOutlet weak var periodLabel: UILabel!
@@ -21,13 +20,10 @@ class EditItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let i = itemIndex {
-            selectedItem = scheduleData[i]
-            periodLabel.text = "Period \(selectedItem!.period)"
-            courseInput.text = selectedItem?.course
-            roomInput.text = selectedItem?.room
-            teacherInput.text = selectedItem?.teacher
-        }
+        periodLabel.text = "Period \(selectedItem!.period)"
+        courseInput.text = selectedItem?.course
+        roomInput.text = selectedItem?.room
+        teacherInput.text = selectedItem?.teacher
     }
    
     override func viewWillDisappear(_ animated: Bool) {
