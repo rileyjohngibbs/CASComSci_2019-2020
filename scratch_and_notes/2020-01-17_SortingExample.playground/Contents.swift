@@ -16,17 +16,31 @@ var myList: [Student] = [
     Student(givenName: "Alberto", familyName: "Mancarella", gradYear: 2021)
 ]
 
+// Using a named function
 func sortByFamilyName(a: Student, b: Student) -> Bool {
-    if a.familyName == b.familyName {
-        return a.givenName < b.givenName
-    } else {
+    if a.familyName != b.familyName {
         return a.familyName < b.familyName
+    } else {
+        return a.givenName < b.givenName
     }
 }
-
 let sortedList = myList.sorted(by: sortByFamilyName)
-myList.sort(by: sortByFamilyName)
-
 for item in sortedList {
     print("\(item.familyName), \(item.givenName)")
+}
+
+// Using a closure
+let sortedByGradYear = myList.sorted(by: {
+    (a, b) in
+    return a.gradYear < b.gradYear
+})
+for item in sortedList {
+    print("\(item.familyName), \(item.givenName)")
+}
+
+// Sorting the function "in-place"
+// Using .sort instead of .sorted will mutate myList and not create a new one
+myList.sort(by: sortByFamilyName)
+for item in myList {
+        print("\(item.familyName), \(item.givenName)")
 }
