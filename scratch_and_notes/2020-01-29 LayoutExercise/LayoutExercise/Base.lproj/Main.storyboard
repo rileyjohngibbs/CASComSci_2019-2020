@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXb-dA-Dbh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="163.66666666666666"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Afternoon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw3-Xa-yEr">
+                                <rect key="frame" x="0.0" y="207.66666666666669" width="414" height="163.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Evening" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5N-kB-QVp">
+                                <rect key="frame" x="0.0" y="371.33333333333331" width="414" height="163.33333333333331"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeA-eR-jR9">
+                                <rect key="frame" x="0.0" y="698.33333333333337" width="414" height="163.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <state key="normal" title="Get Outta Here">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Night" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAP-y2-Dej">
+                                <rect key="frame" x="0.0" y="534.66666666666663" width="414" height="163.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Jw3-Xa-yEr" firstAttribute="top" secondItem="tXb-dA-Dbh" secondAttribute="bottom" id="06P-4i-LmL"/>
+                            <constraint firstItem="s5N-kB-QVp" firstAttribute="top" secondItem="Jw3-Xa-yEr" secondAttribute="bottom" id="07b-nP-Ta2"/>
+                            <constraint firstItem="s5N-kB-QVp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0oz-l6-TPs"/>
+                            <constraint firstItem="VeA-eR-jR9" firstAttribute="height" secondItem="tXb-dA-Dbh" secondAttribute="height" id="5p9-O3-nIy"/>
+                            <constraint firstItem="tXb-dA-Dbh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="92D-OV-Y8b"/>
+                            <constraint firstItem="s5N-kB-QVp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EKs-nn-Sk5"/>
+                            <constraint firstItem="tXb-dA-Dbh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F4G-wY-83e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VeA-eR-jR9" secondAttribute="bottom" id="GsY-56-wom"/>
+                            <constraint firstItem="VeA-eR-jR9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LlC-Um-lT8"/>
+                            <constraint firstItem="VeA-eR-jR9" firstAttribute="top" secondItem="oAP-y2-Dej" secondAttribute="bottom" id="Mgx-aV-ZPf"/>
+                            <constraint firstItem="oAP-y2-Dej" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mtc-xh-ZFF"/>
+                            <constraint firstItem="oAP-y2-Dej" firstAttribute="top" secondItem="s5N-kB-QVp" secondAttribute="bottom" id="OUS-RR-l9y"/>
+                            <constraint firstItem="oAP-y2-Dej" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Of2-pm-Twy"/>
+                            <constraint firstItem="Jw3-Xa-yEr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SQA-99-3oz"/>
+                            <constraint firstItem="Jw3-Xa-yEr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XCx-Lj-euB"/>
+                            <constraint firstItem="VeA-eR-jR9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jdf-xx-xdx"/>
+                            <constraint firstItem="tXb-dA-Dbh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qfO-tW-22j"/>
+                            <constraint firstItem="s5N-kB-QVp" firstAttribute="height" secondItem="tXb-dA-Dbh" secondAttribute="height" id="sD8-II-Dd9"/>
+                            <constraint firstItem="Jw3-Xa-yEr" firstAttribute="height" secondItem="tXb-dA-Dbh" secondAttribute="height" id="z1J-lu-Qy0"/>
+                            <constraint firstItem="oAP-y2-Dej" firstAttribute="height" secondItem="tXb-dA-Dbh" secondAttribute="height" id="zLH-bm-fVU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+</document>
