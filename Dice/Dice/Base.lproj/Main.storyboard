@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtS-vv-Vcr">
+                                <rect key="frame" x="0.0" y="176.5" width="375" height="390.5"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKq-k9-5mq">
+                                <rect key="frame" x="50" y="25" width="275" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Km-Jw-ZE8"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Total: 0">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="36"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="rollAll" destination="BYZ-38-t0r" eventType="touchUpInside" id="0j1-vh-1bH"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fWi-Eh-NWG">
+                                <rect key="frame" x="10" y="85" width="355" height="81.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXd-uZ-MCc">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="40.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJj-Gl-0h4">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="40.5"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+d4">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="24"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addD4WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U9y-ic-F8Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-dl-y1Z">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="40.5"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+d6">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="24"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addD6WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oiX-Zm-XgO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yok-eH-FWR">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="40.5"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+d8">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="24"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addD8WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1R-fE-RxT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s2M-n9-MQz">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="40.5"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+d10">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="24"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addD10WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qhs-gA-fUA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="s2M-n9-MQz" firstAttribute="height" secondItem="PJj-Gl-0h4" secondAttribute="height" id="Jqb-hr-pxO"/>
+                                            <constraint firstItem="s2M-n9-MQz" firstAttribute="width" secondItem="PJj-Gl-0h4" secondAttribute="width" id="NU4-RM-KKC"/>
+                                            <constraint firstItem="Yok-eH-FWR" firstAttribute="width" secondItem="PJj-Gl-0h4" secondAttribute="width" id="QJL-ZO-BWr"/>
+                                            <constraint firstItem="M1d-dl-y1Z" firstAttribute="width" secondItem="PJj-Gl-0h4" secondAttribute="width" id="Qp4-Ga-U3F"/>
+                                            <constraint firstItem="M1d-dl-y1Z" firstAttribute="height" secondItem="PJj-Gl-0h4" secondAttribute="height" id="qtz-Tz-SWY"/>
+                                            <constraint firstItem="Yok-eH-FWR" firstAttribute="height" secondItem="PJj-Gl-0h4" secondAttribute="height" id="wks-fX-thh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ey-b9-PsV">
+                                        <rect key="frame" x="0.0" y="40.5" width="355" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zun-iC-6kP">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="41"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+d12">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="24"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addD12WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MC2-DT-NRk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uN-vr-Toq">
+                                                <rect key="frame" x="89" y="0.0" width="88.5" height="41"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+d20">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="24"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addD20WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mo1-zf-8bg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1n-jf-Kjx">
+                                                <rect key="frame" x="177.5" y="0.0" width="89" height="41"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+d100">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="24"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addD100WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syx-69-QC5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-aM-Bc2">
+                                                <rect key="frame" x="266.5" y="0.0" width="88.5" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="⚙︎ Sum">
+                                                    <color key="titleColor" red="0.0" green="0.24705882352941178" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeTotalTypeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pka-22-EiD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eoq-aM-Bc2" firstAttribute="height" secondItem="zun-iC-6kP" secondAttribute="height" id="6xg-Dn-N8A"/>
+                                            <constraint firstItem="8uN-vr-Toq" firstAttribute="width" secondItem="zun-iC-6kP" secondAttribute="width" id="A8J-cV-3Jv"/>
+                                            <constraint firstItem="A1n-jf-Kjx" firstAttribute="height" secondItem="zun-iC-6kP" secondAttribute="height" id="dTV-Vd-Wn3"/>
+                                            <constraint firstItem="eoq-aM-Bc2" firstAttribute="width" secondItem="zun-iC-6kP" secondAttribute="width" id="m9N-h1-UMN"/>
+                                            <constraint firstItem="8uN-vr-Toq" firstAttribute="height" secondItem="zun-iC-6kP" secondAttribute="height" id="oZ7-dm-Eke"/>
+                                            <constraint firstItem="A1n-jf-Kjx" firstAttribute="width" secondItem="zun-iC-6kP" secondAttribute="width" id="uPp-hy-DzY"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qda-oz-amj">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.51600430012190035" blue="0.50490713451693481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QVV-ui-SuS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearDiceWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dt7-h1-01m"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMJ-sk-HTb">
+                                <rect key="frame" x="0.0" y="567" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXQ-9q-qed">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Erx-7D-5jN"/>
+                                        </constraints>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="previousGroup" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTJ-CN-Icl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btT-7B-Ypn">
+                                        <rect key="frame" x="50" y="0.0" width="275" height="50"/>
+                                        <color key="backgroundColor" name="ButtonTitleColor"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Description">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" metaFont="system" size="24"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="rollCurrent" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVD-c4-O8T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyV-FQ-Xz6">
+                                        <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="oek-Dw-X9F"/>
+                                        </constraints>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="nextGroup" destination="BYZ-38-t0r" eventType="touchUpInside" id="SY3-5m-CX5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fWi-Eh-NWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6ty-9h-YuE"/>
+                            <constraint firstItem="qda-oz-amj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7CY-9A-DqL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qda-oz-amj" secondAttribute="trailing" id="BIa-aI-Rxx"/>
+                            <constraint firstItem="qda-oz-amj" firstAttribute="width" secondItem="hMJ-sk-HTb" secondAttribute="width" id="HUN-bg-9ib"/>
+                            <constraint firstItem="UtS-vv-Vcr" firstAttribute="top" secondItem="fWi-Eh-NWG" secondAttribute="bottom" constant="10" id="I9R-ad-kHz"/>
+                            <constraint firstItem="UtS-vv-Vcr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8v-mx-CLV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fWi-Eh-NWG" secondAttribute="trailing" constant="10" id="KHq-as-eki"/>
+                            <constraint firstItem="UtS-vv-Vcr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LG3-Ty-pII"/>
+                            <constraint firstItem="qda-oz-amj" firstAttribute="top" secondItem="hMJ-sk-HTb" secondAttribute="bottom" id="P7X-hF-GIO"/>
+                            <constraint firstItem="UtS-vv-Vcr" firstAttribute="top" secondItem="fWi-Eh-NWG" secondAttribute="bottom" constant="10" id="VQw-6U-qhH"/>
+                            <constraint firstItem="KKq-k9-5mq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Zod-hT-6Oe"/>
+                            <constraint firstItem="qda-oz-amj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="afq-Ov-8TM"/>
+                            <constraint firstItem="KKq-k9-5mq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cqx-Ep-QSQ"/>
+                            <constraint firstItem="hMJ-sk-HTb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ezr-JK-9Ux"/>
+                            <constraint firstItem="qda-oz-amj" firstAttribute="height" secondItem="hMJ-sk-HTb" secondAttribute="height" id="fkm-Wi-JoY"/>
+                            <constraint firstItem="hMJ-sk-HTb" firstAttribute="top" secondItem="UtS-vv-Vcr" secondAttribute="bottom" id="gzU-7C-cVA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KKq-k9-5mq" secondAttribute="trailing" constant="50" id="j9I-LG-hbf"/>
+                            <constraint firstItem="hMJ-sk-HTb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mzo-tH-F6K"/>
+                            <constraint firstItem="fWi-Eh-NWG" firstAttribute="top" secondItem="KKq-k9-5mq" secondAttribute="bottom" constant="10" id="p4C-Lc-O0T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="diceBox" destination="UtS-vv-Vcr" id="azv-s3-kIq"/>
+                        <outlet property="poolDescriptionButton" destination="btT-7B-Ypn" id="Dae-d7-hwd"/>
+                        <outlet property="totalButton" destination="KKq-k9-5mq" id="nuM-9G-1pc"/>
+                        <outlet property="totalTypeButton" destination="eoq-aM-Bc2" id="nmW-wk-V9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.376811594202906" y="19.565217391304348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ButtonTitleColor">
+            <color red="0.0" green="0.25" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
