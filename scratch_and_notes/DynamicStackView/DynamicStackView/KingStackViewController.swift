@@ -18,9 +18,13 @@ class KingStackViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let labels = (1...labelCount).map({ (x) in UILabel() })
+        let labels = (1...labelCount).map({ (x) -> UILabel in
+            let newLabel = UILabel()
+            newLabel.text = "Hello world \(x)"
+            newLabel.textAlignment = .center
+            return newLabel
+        })
         for label in labels {
-            label.text = "Hello world"
             lordStackView.addArrangedSubview(label)
             let constraint = NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: labels[0], attribute: .height, multiplier: 1, constant: 0)
             if label != labels[0] {
