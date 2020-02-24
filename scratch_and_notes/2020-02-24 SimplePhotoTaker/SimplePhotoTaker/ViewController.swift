@@ -17,14 +17,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        AVCaptureDevice.requestAccess(for: .video, completionHandler: {(_) in return})
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+            case .notDetermined:
+                AVCaptureDevice.requestAccess(for: .video, completionHandler: {(_) in return})
+            default:
+                return
+        }
     }
 
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
-        fuckMe()
+        takeIt()
     }
     
-    func fuckMe() {
+    func takeIt() {
         takerController = UIImagePickerController()
         takerController.delegate = self
         takerController.sourceType = .camera
