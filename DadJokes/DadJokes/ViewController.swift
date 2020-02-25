@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        NotificationCenter.default.addObserver(self, selector: #selector(adjustBottomConstraint), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustBottomConstraint), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     @objc func adjustBottomConstraint(notification: NSNotification) {

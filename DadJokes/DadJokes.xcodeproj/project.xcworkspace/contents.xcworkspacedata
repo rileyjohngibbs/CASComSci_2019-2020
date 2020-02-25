@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/Riley/Desktop/BadKeyboard/DadJokes.xcodeproj">
+      location = "group:/Users/Riley/Documents/GitHub/CASComSci_2019-2020/DadJokes/DadJokes/dadJokes.png">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -14,7 +14,6 @@
 		BF81040C2404842700385801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF81040B2404842700385801 /* Assets.xcassets */; };
 		BF81040F2404842700385801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF81040D2404842700385801 /* LaunchScreen.storyboard */; };
 		BF81041724048AAC00385801 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF81041624048AAC00385801 /* JokesViewController.swift */; };
-		BF8104192404956A00385801 /* dadJokes.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8104182404956A00385801 /* dadJokes.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		BF81040E2404842700385801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF8104102404842700385801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF81041624048AAC00385801 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
-		BF8104182404956A00385801 /* dadJokes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dadJokes.png; path = ../../dadJokes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				BF81040B2404842700385801 /* Assets.xcassets */,
 				BF81040D2404842700385801 /* LaunchScreen.storyboard */,
 				BF8104102404842700385801 /* Info.plist */,
-				BF8104182404956A00385801 /* dadJokes.png */,
 			);
 			path = DadJokes;
 			sourceTree = "<group>";
@@ -131,7 +128,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8104192404956A00385801 /* dadJokes.png in Resources */,
 				BF81040F2404842700385801 /* LaunchScreen.storyboard in Resources */,
 				BF81040C2404842700385801 /* Assets.xcassets in Resources */,
 				BF81040A2404842500385801 /* Main.storyboard in Resources */,
