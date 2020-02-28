@@ -28,7 +28,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func newImagePress(_ sender: UIBarButtonItem) {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
             case .authorized:
-                self.takePhoto()
+                takerController = UIImagePickerController()
+                takerController.delegate = self
+                takerController.sourceType = .camera
+                present(takerController, animated: true, completion: nil)
             case .notDetermined:
                 AVCaptureDevice.requestAccess(for: .video) { granted in
                     if granted {
