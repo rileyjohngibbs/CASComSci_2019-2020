@@ -56,7 +56,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let plane = SCNPlane(width: anchor.referenceImage.physicalSize.width, height: anchor.referenceImage.physicalSize.height)
         plane.firstMaterial?.diffuse.contents = UIColor(white: 0.0, alpha: 1.0)
         let planeNode = SCNNode(geometry: plane)
-        // planeNode.eulerAngles.x = -.pi / 2
+        planeNode.eulerAngles.x = -.pi / 2
         node.addChildNode(planeNode)
     }
 
