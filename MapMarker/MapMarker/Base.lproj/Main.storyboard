@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapMarker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TKG-Vo-zdw">
+                                <rect key="frame" x="0.0" y="102" width="414" height="707"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OX-QC-I1V">
+                                <rect key="frame" x="0.0" y="817" width="207" height="45"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="KH0-Cj-bUW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title=" Zoom Out" image="minus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEo-fU-eCp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vg-YW-Occ">
+                                <rect key="frame" x="207" y="817" width="207" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RyB-aq-qNG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title=" Zoom In" image="plus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0C1-he-3aK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's Crossroads!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-xc-tUT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iCw-gg-HQG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Vg-YW-Occ" firstAttribute="width" secondItem="8OX-QC-I1V" secondAttribute="width" id="4WX-6Z-euW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W6L-xc-tUT" secondAttribute="trailing" id="8gL-xU-36a"/>
+                            <constraint firstItem="8OX-QC-I1V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="98A-el-5pc"/>
+                            <constraint firstItem="W6L-xc-tUT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AVZ-Lk-FCc"/>
+                            <constraint firstItem="8OX-QC-I1V" firstAttribute="top" secondItem="TKG-Vo-zdw" secondAttribute="bottom" constant="8" symbolic="YES" id="DJn-qb-z7a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TKG-Vo-zdw" secondAttribute="trailing" id="H8B-hi-OaZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Vg-YW-Occ" secondAttribute="bottom" id="JC5-3i-tJp"/>
+                            <constraint firstItem="4Vg-YW-Occ" firstAttribute="leading" secondItem="8OX-QC-I1V" secondAttribute="trailing" id="JLe-Ta-Uo7"/>
+                            <constraint firstItem="4Vg-YW-Occ" firstAttribute="height" secondItem="8OX-QC-I1V" secondAttribute="height" id="K91-VF-Q5B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8OX-QC-I1V" secondAttribute="bottom" id="Qti-95-yrK"/>
+                            <constraint firstItem="TKG-Vo-zdw" firstAttribute="top" secondItem="W6L-xc-tUT" secondAttribute="bottom" constant="8" symbolic="YES" id="gkR-Yw-pbJ"/>
+                            <constraint firstItem="TKG-Vo-zdw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hcb-4U-LVa"/>
+                            <constraint firstItem="4Vg-YW-Occ" firstAttribute="top" secondItem="TKG-Vo-zdw" secondAttribute="bottom" constant="8" symbolic="YES" id="iC8-jt-yCM"/>
+                            <constraint firstItem="W6L-xc-tUT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oZx-u3-JZ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Vg-YW-Occ" secondAttribute="trailing" id="wDa-Vf-19T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="crossroadsLabel" destination="W6L-xc-tUT" id="2Yc-mc-Ghm"/>
+                        <outlet property="mapView" destination="TKG-Vo-zdw" id="B9e-8a-hwg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus.magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="plus.magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
