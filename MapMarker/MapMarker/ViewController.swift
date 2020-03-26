@@ -9,10 +9,11 @@
 import MapKit
 import UIKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var crossroadsLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    var locationManager: CLLocationManager!
     
     let CROSSROADS_LAT = 34.0240892
     let CROSSROADS_LONG = -118.4747321
@@ -20,8 +21,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         mapView.delegate = self
-        let point = MKMapPoint(CLLocationCoordinate2D(latitude: CROSSROADS_LAT, longitude: CROSSROADS_LONG))
+        let crossroadsCoord = CLLocationCoordinate2D(latitude: CROSSROADS_LAT, longitude: CROSSROADS_LONG)
+        let point = MKMapPoint(crossroadsCoord)
         let size = MKMapSize(width: 1000, height: 1000)
         let rect = MKMapRect(origin: point, size: size)
         mapView.setRegion(MKCoordinateRegion(rect), animated: true)
@@ -53,6 +58,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(newRegion, animated: true)
     }
     
+    @IBAction func findMe(_ sender: Any) {
+        locationManager.requestLocation()
+    }
+    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let rect = mapView.visibleMapRect
         let crossroadsLoc = CLLocationCoordinate2D(latitude: CROSSROADS_LAT, longitude: CROSSROADS_LONG)
@@ -63,5 +72,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
             crossroadsLabel.text = "Where's Crossroads?"
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let span = mapView.region.span
+        print(span)
+        let coords = locations.suffix(1)[0].coordinate
+        let newRegion = MKCoordinateRegion(center: coords, span: span)
+        mapView.setRegion(newRegion, animated: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
 }
 
