@@ -20,11 +20,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Set up the CLLocationManager
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        
+        // Set the delegate for the MKMapView
         mapView.delegate = self
+        
+        // Set the initial region for the MKMapView
         let crossroadsCoord = CLLocationCoordinate2D(latitude: CROSSROADS_LAT, longitude: CROSSROADS_LONG)
         let point = MKMapPoint(crossroadsCoord)
         let size = MKMapSize(width: 1000, height: 1000)
@@ -62,6 +67,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.requestLocation()
     }
     
+    // MARK: Implement the MKMapViewDelegate protocol's methods
+    
+    // Check if we're at Crossroads right now
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let rect = mapView.visibleMapRect
         let crossroadsLoc = CLLocationCoordinate2D(latitude: CROSSROADS_LAT, longitude: CROSSROADS_LONG)
@@ -73,14 +81,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+    // MARK: Implement CLLocationManagerDelegate protocol's methods
+    
+    // Handle new locations by moving the mapView region to the new location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let span = mapView.region.span
-        print(span)
         let coords = locations.suffix(1)[0].coordinate
         let newRegion = MKCoordinateRegion(center: coords, span: span)
         mapView.setRegion(newRegion, animated: true)
     }
     
+    // Handle an error when trying to get a new location by just printing the error
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
