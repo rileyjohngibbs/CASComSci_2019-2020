@@ -90,7 +90,7 @@ class GameScene: SKScene {
         currentScore.fontSize = 40
         currentScore.isHidden = true
         currentScore.text = "Score: 0"
-        currentScore.fontColor = SKColor.white
+        currentScore.fontColor = SKColor.systemYellow
         self.addChild(currentScore)
         let width = frame.size.width - 200
         let height = frame.size.height - 300
@@ -134,7 +134,7 @@ class GameScene: SKScene {
         gameLogo.position = CGPoint(x: 0, y: (frame.size.height / 2) - 200)
         gameLogo.fontSize = 60
         gameLogo.text = "SNAKE"
-        gameLogo.fontColor = SKColor.systemTeal
+        gameLogo.fontColor = SKColor.systemYellow
         self.addChild(gameLogo)
         
         
@@ -143,7 +143,7 @@ class GameScene: SKScene {
         bestScore.position = CGPoint(x: 0, y: gameLogo.position.y - 50)
         bestScore.fontSize = 40
         bestScore.text = "Best Score: \(UserDefaults.standard.integer(forKey: "bestScore"))"
-        bestScore.fontColor = SKColor.white
+        bestScore.fontColor = SKColor.systemYellow
         self.addChild(bestScore)
         
         
