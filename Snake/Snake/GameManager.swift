@@ -37,11 +37,11 @@ class GameManager {
     }
     
     private func generateNewPoint() {
-        var randomX = CGFloat(arc4random_uniform(19))
-        var randomY = CGFloat(arc4random_uniform(39))
+        var randomX = Int.random(in: 0...19)
+        var randomY = Int.random(in: 0...39)
         while contains(a: scene.playerPositions, v: (Int(randomX), Int(randomY))) {  // TODO: Is this a bug? Should the order be flipped? I think sometimes the apple is showing up underneath the snake's tail.
-            randomX = CGFloat(arc4random_uniform(19))
-            randomY = CGFloat(arc4random_uniform(39))
+            randomX = Int.random(in: 0...19)
+            randomY = Int.random(in: 0...39)
         }
         scene.scorePos = CGPoint(x: randomX, y: randomY)  // TODO: Don't use CGPoint with CGFloat values; use (x: Int, y: Int)
     }
