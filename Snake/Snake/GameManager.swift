@@ -190,13 +190,24 @@ class GameManager {
         }
     }
     
-    func swipe(ID: Direction) {  // TODO: Refactor with isOpposite function
-        if !(ID == .down && playerDirection == .up) && !(ID == .up && playerDirection == .down) {
-            if !(ID == .left && playerDirection == .right) && !(ID == .right && playerDirection == .left) {
-                if playerDirection != .stop {
-                    playerDirection = ID
-                }
-            }
+    func swipe(ID: Direction) {
+        if opposite(ID) != playerDirection && playerDirection != .stop {
+            playerDirection = ID
+        }
+    }
+    
+    private func opposite(_ direction: Direction) -> Direction? {
+        switch direction {
+        case .left:
+            return .right
+        case .right:
+            return .left
+        case .up:
+            return .down
+        case .down:
+            return .up
+        case .stop:
+            return nil
         }
     }
     
