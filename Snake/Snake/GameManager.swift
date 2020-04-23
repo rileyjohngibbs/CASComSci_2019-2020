@@ -161,13 +161,8 @@ class GameManager {
     
     private func finishAnimation() {
         if playerDirection == .stop && scene.playerPositions.count > 0 {
-            var hasFinished = true  // TODO: Define once with !contains
             let headOfSnake = scene.playerPositions[0]
-            for position in scene.playerPositions {
-                if headOfSnake != position {
-                    hasFinished = false  // TODO: Add break statement
-                }
-            }
+            let hasFinished = scene.playerPositions.allSatisfy({ $0 == headOfSnake })
             if hasFinished {
                 updateScore()
                 playerDirection = .down
