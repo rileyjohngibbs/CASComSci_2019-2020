@@ -13,6 +13,7 @@ class GameScene: SKScene {
 
     var gameLogo: SKLabelNode!
     var bestScore: SKLabelNode!
+    var resetScore: SKLabelNode!
     var playButton: SKShapeNode!
     var game: GameManager!
     var currentScore: SKLabelNode!
@@ -69,8 +70,15 @@ class GameScene: SKScene {
             let location = touch.location(in: self)
             let touchedNode = self.nodes(at: location)
             for node in touchedNode {
-                if node.name == "play_button" {
+                switch node.name {
+                case "play_button":
                     startGame()
+                    break
+                case "reset_score":
+                    resetHighScore()
+                    break
+                default:
+                    break
                 }
             }
         }
@@ -93,6 +101,9 @@ class GameScene: SKScene {
             self.currentScore.run(SKAction.scale(to: 1, duration: 0.4))
             self.game.initGame()
         }
+        resetScore.run(SKAction.move(to: CGPoint(x: 0, y: bottomCorner.y - 40), duration: 0.4)) {
+            self.resetScore.isHidden = true
+        }
     }
     
     private func initializeMenu() {
@@ -111,6 +122,15 @@ class GameScene: SKScene {
         bestScore.text = "Best Score: \(UserDefaults.standard.integer(forKey: "bestScore"))"
         bestScore.fontColor = SKColor.white
         self.addChild(bestScore)
+        
+        resetScore = SKLabelNode(fontNamed: "ArialRoundedMTBold")
+        resetScore.name = "reset_score"
+        resetScore.zPosition = 1
+        resetScore.position = CGPoint(x: 0, y: gameLogo.position.y - 80)
+        resetScore.fontSize = 20
+        resetScore.text = "Reset"
+        resetScore.fontColor = SKColor.lightGray
+        self.addChild(resetScore)
         
         playButton = SKShapeNode()
         playButton.name = "play_button"
@@ -167,5 +187,10 @@ class GameScene: SKScene {
             x = CGFloat(width / -2) + (cellWidth / 2)
             y -= cellHeight
         }
+    }
+    
+    private func resetHighScore() {
+        UserDefaults.standard.set(0, forKey: "bestScore")
+        bestScore.text = "Best Score: 0"
     }
 }

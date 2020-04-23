@@ -184,6 +184,8 @@ class GameManager {
                         self.scene.playButton.isHidden = false
                         self.scene.playButton.run(SKAction.scale(to: 1, duration: 0.3))
                         self.scene.bestScore.run(SKAction.move(to: CGPoint(x: 0, y: self.scene.gameLogo.position.y - 50), duration: 0.3))
+                        self.scene.resetScore.isHidden = false
+                        self.scene.resetScore.run(SKAction.move(to: CGPoint(x: 0, y: self.scene.gameLogo.position.y - 80), duration: 0.3))
                     }
                 }
             }
