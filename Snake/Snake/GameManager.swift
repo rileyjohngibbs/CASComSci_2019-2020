@@ -29,21 +29,25 @@ class GameManager {
     }
     
     func initGame() {
-        scene.playerPositions.append((10, 10))
-        scene.playerPositions.append((10, 11))
-        scene.playerPositions.append((10, 12))
+        scene.playerPositions.append(Position(x: 10, y: 10))
+        scene.playerPositions.append(Position(x: 11, y: 10))
+        scene.playerPositions.append(Position(x: 12, y: 10))
         renderChange()
         generateNewPoint()
     }
     
     private func generateNewPoint() {
-        var randomX = CGFloat(arc4random_uniform(19))
-        var randomY = CGFloat(arc4random_uniform(39))
-        while contains(a: scene.playerPositions, v: (Int(randomX), Int(randomY))) {  // TODO: Is this a bug? Should the order be flipped? I think sometimes the apple is showing up underneath the snake's tail.
-            randomX = CGFloat(arc4random_uniform(19))
-            randomY = CGFloat(arc4random_uniform(39))
+        var position = generateRandomPosition()
+        while scene.playerPositions.contains(position) {
+            position = generateRandomPosition()
         }
-        scene.scorePos = CGPoint(x: randomX, y: randomY)  // TODO: Don't use CGPoint with CGFloat values; use (x: Int, y: Int)
+        scene.scorePos = position
+    }
+    
+    func generateRandomPosition() -> Position {
+        let randomX = Int(arc4random_uniform(19))
+        let randomY = Int(arc4random_uniform(39))
+        return Position(x: randomX, y: randomY)
     }
     
     func update(time: Double) {  // In GameScene, we call this with a TimeInterval
@@ -61,13 +65,14 @@ class GameManager {
     }
     
     func renderChange() {
-        for (node, x, y) in scene.gameArray {
-            if contains(a: scene.playerPositions, v: (x, y)) {
+        for cell in scene.gameArray {
+            let node = cell.node
+            if contains(a: scene.playerPositions, v: cell.position) {
                 node.fillColor = SKColor.cyan
             } else {
                 node.fillColor = SKColor.clear
                 if scene.scorePos != nil {
-                    if Int((scene.scorePos?.x)!) == y && Int((scene.scorePos?.y)!) == x { // TODO: This is dumb that we're comparing x to y
+                    if scene.scorePos! == cell.position {
                         node.fillColor = SKColor.red
                     }
                 }
@@ -75,14 +80,8 @@ class GameManager {
         }
     }
     
-    func contains(a: [(Int, Int)], v: (Int, Int)) -> Bool {  // TODO: Use native Array.contains method
-        let (c1, c2) = v
-        for (v1, v2) in a {
-            if v1 == c1 && v2 == c2 {
-                return true
-            }
-        }
-        return false
+    func contains(a: [Position], v: Position) -> Bool {
+        return a.contains(v)
     }
     
     func updatePlayerPosition() {
@@ -115,19 +114,19 @@ class GameManager {
                 scene.playerPositions[start] = scene.playerPositions[start - 1]
                 start -= 1
             }
-            scene.playerPositions[0] = (scene.playerPositions[0].0 + yChange, scene.playerPositions[0].1 + xChange)
+            scene.playerPositions[0] = Position(x: scene.playerPositions[0].x + xChange, y: scene.playerPositions[0].y + yChange)
         }
         if scene.playerPositions.count > 0 {
-            let x = scene.playerPositions[0].1
-            let y = scene.playerPositions[0].0
+            let x = scene.playerPositions[0].x
+            let y = scene.playerPositions[0].y
             if y > 39 {
-                scene.playerPositions[0].0 = 0
+                scene.playerPositions[0].y = 0
             } else if y < 0 {
-                scene.playerPositions[0].0 = 39
+                scene.playerPositions[0].y = 39
             } else if x > 19 {
-                scene.playerPositions[0].1 = 0
+                scene.playerPositions[0].x = 0
             } else if x < 0 {
-                scene.playerPositions[0].1 = 19
+                scene.playerPositions[0].x = 19
             }
         }
         renderChange()
@@ -135,9 +134,7 @@ class GameManager {
     
     private func checkForScore() {
         if scene.scorePos != nil {  // TODO: Change to an if let statement
-            let x = scene.playerPositions[0].0
-            let y = scene.playerPositions[0].1
-            if Int((scene.scorePos?.x)!) == y && Int((scene.scorePos?.y)!) == x {
+            if scene.scorePos! == scene.playerPositions[0] {
                 currentScore += 1
                 scene.currentScore.text = "Score: \(currentScore)"
                 generateNewPoint()

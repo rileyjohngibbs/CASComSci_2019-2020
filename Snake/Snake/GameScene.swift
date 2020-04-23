@@ -10,16 +10,16 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-
+    
     var gameLogo: SKLabelNode!
     var bestScore: SKLabelNode!
     var playButton: SKShapeNode!
     var game: GameManager!
     var currentScore: SKLabelNode!
-    var playerPositions: [(Int, Int)] = []  // TODO: Label the x and y
+    var playerPositions: [Position] = []
     var gameBG: SKShapeNode!
-    var gameArray: [(node: SKShapeNode, x: Int, y: Int)] = []
-    var scorePos: CGPoint?  // TODO: Make this a tuple too?
+    var gameArray: [Cell] = []
+    var scorePos: Position?
     
     override func didMove(to view: SKView) {
         initializeMenu()
@@ -154,13 +154,14 @@ class GameScene: SKScene {
         let cellHeight: CGFloat = CGFloat(height) / 40
         var x = CGFloat(width / -2) + (cellWidth / 2)
         var y = CGFloat(height / 2) - (cellHeight / 2)
-        for i in 0...numRows - 1 {
-            for j in 0...numCols - 1 {
+        for j in 0...numRows - 1 {
+            for i in 0...numCols - 1 {
                 let cellNode = SKShapeNode(rectOf: CGSize(width: cellWidth, height: cellHeight))
                 cellNode.strokeColor = SKColor.black
                 cellNode.zPosition = 2
                 cellNode.position = CGPoint(x: x, y: y)
-                gameArray.append((node: cellNode, x: i, y: j))
+                let cell = Cell(node: cellNode, position: Position(x: i, y: j))
+                gameArray.append(cell)
                 gameBG.addChild(cellNode)
                 x += cellWidth
             }
