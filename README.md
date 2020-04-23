@@ -1,5 +1,7 @@
 # Crossroads CAS Computer Science, 2019-2020
 
+Me am not Bizarro Riley. You should not read this. Coding is bad.
+
 Instructor: Riley John Gibbs
 
 Course information available on the Crossroads website.
