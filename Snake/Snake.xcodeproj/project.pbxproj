@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF06E102245152850096FA5D /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06E101245152850096FA5D /* Structs.swift */; };
 		BF88DFC524476374005A362C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88DFC424476374005A362C /* AppDelegate.swift */; };
 		BF88DFC724476374005A362C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BF88DFC624476374005A362C /* GameScene.sks */; };
 		BF88DFCB24476374005A362C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88DFCA24476374005A362C /* GameScene.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF06E101245152850096FA5D /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		BF88DFC124476374005A362C /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF88DFC424476374005A362C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF88DFC624476374005A362C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				BF88DFC424476374005A362C /* AppDelegate.swift */,
 				BF88DFC624476374005A362C /* GameScene.sks */,
 				BF88DFCA24476374005A362C /* GameScene.swift */,
+				BF06E101245152850096FA5D /* Structs.swift */,
 				BF88DFDC24476595005A362C /* GameManager.swift */,
 				BF88DFCC24476374005A362C /* GameViewController.swift */,
 				BF88DFCE24476374005A362C /* Main.storyboard */,
@@ -147,6 +150,7 @@
 			files = (
 				BF88DFCB24476374005A362C /* GameScene.swift in Sources */,
 				BF88DFDD24476595005A362C /* GameManager.swift in Sources */,
+				BF06E102245152850096FA5D /* Structs.swift in Sources */,
 				BF88DFCD24476374005A362C /* GameViewController.swift in Sources */,
 				BF88DFC524476374005A362C /* AppDelegate.swift in Sources */,
 			);
