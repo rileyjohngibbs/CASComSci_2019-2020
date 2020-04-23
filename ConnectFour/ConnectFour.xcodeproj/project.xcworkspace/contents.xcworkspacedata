@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Mastermind.xcodeproj">
+      location = "self:/Users/Riley/Documents/GitHub/CASComSci_2019-2020/ConnectFour/ConnectFour.xcodeproj">
    </FileRef>
 </Workspace>

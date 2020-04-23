@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF06E10C245178C00096FA5D /* Mastermind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastermind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF06E10C245178C00096FA5D /* Connect Four.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Connect Four.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF06E10F245178C00096FA5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF06E111245178C00096FA5D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		BF06E115245178C00096FA5D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		BF06E103245178C00096FA5D = {
 			isa = PBXGroup;
 			children = (
-				BF06E10E245178C00096FA5D /* Mastermind */,
+				BF06E10E245178C00096FA5D /* ConnectFour */,
 				BF06E10D245178C00096FA5D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		BF06E10D245178C00096FA5D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF06E10C245178C00096FA5D /* Mastermind.app */,
+				BF06E10C245178C00096FA5D /* Connect Four.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF06E10E245178C00096FA5D /* Mastermind */ = {
+		BF06E10E245178C00096FA5D /* ConnectFour */ = {
 			isa = PBXGroup;
 			children = (
 				BF06E12824517C860096FA5D /* Board.swift */,
@@ -70,15 +70,15 @@
 				BF06E11E245178C80096FA5D /* LaunchScreen.storyboard */,
 				BF06E121245178C80096FA5D /* Info.plist */,
 			);
-			path = Mastermind;
+			path = ConnectFour;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF06E10B245178C00096FA5D /* Mastermind */ = {
+		BF06E10B245178C00096FA5D /* ConnectFour */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF06E124245178C80096FA5D /* Build configuration list for PBXNativeTarget "Mastermind" */;
+			buildConfigurationList = BF06E124245178C80096FA5D /* Build configuration list for PBXNativeTarget "ConnectFour" */;
 			buildPhases = (
 				BF06E108245178C00096FA5D /* Sources */,
 				BF06E109245178C00096FA5D /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = Mastermind;
+			name = ConnectFour;
 			productName = Mastermind;
-			productReference = BF06E10C245178C00096FA5D /* Mastermind.app */;
+			productReference = BF06E10C245178C00096FA5D /* Connect Four.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF06E107245178C00096FA5D /* Build configuration list for PBXProject "Mastermind" */;
+			buildConfigurationList = BF06E107245178C00096FA5D /* Build configuration list for PBXProject "ConnectFour" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF06E10B245178C00096FA5D /* Mastermind */,
+				BF06E10B245178C00096FA5D /* ConnectFour */,
 			);
 		};
 /* End PBXProject section */
@@ -294,13 +294,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q63YJWBWF;
-				INFOPLIST_FILE = Mastermind/Info.plist;
+				INFOPLIST_FILE = ConnectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rileyjohngibbs.Mastermind;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rileyjohngibbs.ConnectFour;
+				PRODUCT_NAME = "Connect Four";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,13 +312,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q63YJWBWF;
-				INFOPLIST_FILE = Mastermind/Info.plist;
+				INFOPLIST_FILE = ConnectFour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rileyjohngibbs.Mastermind;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rileyjohngibbs.ConnectFour;
+				PRODUCT_NAME = "Connect Four";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -327,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF06E107245178C00096FA5D /* Build configuration list for PBXProject "Mastermind" */ = {
+		BF06E107245178C00096FA5D /* Build configuration list for PBXProject "ConnectFour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF06E122245178C80096FA5D /* Debug */,
@@ -336,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF06E124245178C80096FA5D /* Build configuration list for PBXNativeTarget "Mastermind" */ = {
+		BF06E124245178C80096FA5D /* Build configuration list for PBXNativeTarget "ConnectFour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF06E125245178C80096FA5D /* Debug */,
