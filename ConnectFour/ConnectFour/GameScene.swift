@@ -45,14 +45,19 @@ class GameScene: SKScene {
         var y = height / -2 + cellWidth / 2
         for col in board.columns {
             for cell in col.cells {
-                let node = SKShapeNode(rectOf: CGSize(width: cellWidth, height: cellWidth))
-                node.zPosition = 2
-                node.position = CGPoint(x: x, y: y)
-                node.strokeColor = SKColor.black
-                cell.node = node
-                cell.fill()
-                addChild(node)
-                y += cellWidth
+                 let boardNode = SKShapeNode(rectOf: CGSize(width: cellWidth, height: cellWidth))
+                              boardNode.zPosition = 2
+                              boardNode.position = CGPoint(x: x, y: y)
+                              boardNode.strokeColor = SKColor.black
+                              boardNode.fillColor = .yellow
+                             let node = SKShapeNode(circleOfRadius: 35)
+                              node.zPosition = 3
+                              node.position = CGPoint(x: x, y: y)
+                              cell.node = node
+                              cell.fill()
+                              addChild(node)
+                              addChild(boardNode)
+                              y += cellWidth
             }
             let dropper = SKShapeNode()
             dropper.zPosition = 2
